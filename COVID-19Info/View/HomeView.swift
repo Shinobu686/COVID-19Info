@@ -13,15 +13,6 @@ struct HomeView: View {
     var body: some View {
         
         VStack {
-            HStack {
-                Spacer()
-                Button(action:{}) {
-                    Image(systemName: "goforward")
-                        .resizable()
-                        .frame(width: screenWidth / 10, height: screenWidth / 10)
-                }.padding()
-            }
-            
             Text("新型コロナウイルスの状況")
                 .fontWeight(.bold)
                 .font(.title2)
@@ -30,7 +21,7 @@ struct HomeView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 30)
                     .fill(Color.white)
-                    .frame(width: screenWidth, height: screenWidth * 1.4)
+                    .frame(width: screenWidth, height: screenWidth + 100)
                     .shadow(color: .gray, radius: 3, x: 10, y: 7)
                 
                 HStack(spacing: 10) {
@@ -46,7 +37,7 @@ struct HomeView: View {
                         CovidDataItem(itemName: "退院者数", numValue: "551293")
                     }
                 }
-            }.padding(.bottom, 50)
+            }.padding(.bottom)
             
             Button(action: {}) {
                 Text("厚労省ホームページ")

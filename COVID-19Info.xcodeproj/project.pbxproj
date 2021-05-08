@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4420C702644357C00613439 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4420C6F2644357C00613439 /* HomeView.swift */; };
+		D4420C752646CD1700613439 /* CovidDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4420C742646CD1700613439 /* CovidDataItem.swift */; };
 		D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF12640362A00F57DFC /* AppDelegate.swift */; };
 		D4DD0BF42640362A00F57DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */; };
-		D4DD0BF62640362A00F57DFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF52640362A00F57DFC /* ContentView.swift */; };
 		D4DD0BF82640362C00F57DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DD0BF72640362C00F57DFC /* Assets.xcassets */; };
 		D4DD0BFB2640362C00F57DFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DD0BFA2640362C00F57DFC /* Preview Assets.xcassets */; };
 		D4DD0BFE2640362C00F57DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4DD0BFC2640362C00F57DFC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4420C6F2644357C00613439 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D4420C742646CD1700613439 /* CovidDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDataItem.swift; sourceTree = "<group>"; };
 		D4DD0BEE2640362A00F57DFC /* COVID-19Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DD0BF12640362A00F57DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4DD0BF52640362A00F57DFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D4DD0BF72640362C00F57DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4DD0BFA2640362C00F57DFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4DD0BFD2640362C00F57DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4420C782646CD2B00613439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4420C6F2644357C00613439 /* HomeView.swift */,
+				D4420C742646CD1700613439 /* CovidDataItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D4DD0BE52640362A00F57DFC = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +69,7 @@
 			children = (
 				D4DD0BF12640362A00F57DFC /* AppDelegate.swift */,
 				D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */,
-				D4DD0BF52640362A00F57DFC /* ContentView.swift */,
+				D4420C782646CD2B00613439 /* View */,
 				D4DD0BF72640362C00F57DFC /* Assets.xcassets */,
 				D4DD0BFC2640362C00F57DFC /* LaunchScreen.storyboard */,
 				D4DD0BFF2640362C00F57DFC /* Info.plist */,
@@ -145,9 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4420C752646CD1700613439 /* CovidDataItem.swift in Sources */,
 				D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */,
+				D4420C702644357C00613439 /* HomeView.swift in Sources */,
 				D4DD0BF42640362A00F57DFC /* SceneDelegate.swift in Sources */,
-				D4DD0BF62640362A00F57DFC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,29 +2,26 @@
 //  CovidInfoViewModel.swift
 //  COVID-19Info
 //
-//  Created by 久富稜也 on 2021/05/09.
+//  Created by 久富稜也 on 2021/05/13.
 //
 
-import UIKit
+import Foundation
 
-struct CovidInfoViewModel {
+class CovidInfoViewModel: ObservableObject {
     
-    // GETリクエスト
-    // escapingで関数外でもデータを保持する
-    static func getTotal(completion: @escaping (CovidInfoResponse.Total) -> Void) {
-        let url = URL(string: "https://covid19-japan-web-api.vercel.app/api/v1/total")!
-        let request = URLRequest(url: url)
-        // URLにリクエストを投げる
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error != nil {
-                print("error:\(error!.localizedDescription)")
+    @Published var covidData: CovidInfoResponse?
+    
+    // リクエストメソッドの呼び出し
+    func fetchCovidInfo() {
+        CovidInfoService().getCovidInfo { result in
+            switch result {
+            case .success(let covidData):
+                DispatchQueue.main.async {
+                    self.covidData = covidData
+                }
+            case . failure(_ ):
+                print("error")
             }
-            if let data = data {
-                // 受け取ったデータをデコードする
-                let result = try! JSONDecoder().decode(CovidInfoResponse.Total.self, from: data)
-                completion(result)
-            }
-        }.resume()
-        
+        }
     }
 }

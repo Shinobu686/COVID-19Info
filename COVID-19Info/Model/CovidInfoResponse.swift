@@ -7,14 +7,12 @@
 
 import UIKit
 
-struct CovidInfoResponse: Codable { // 都道府県別の結果にも対応できるように大枠
+struct CovidInfoResponse: Decodable {
     // 国内の合計値
-    struct Total: Codable {
-        var pcr: Int
-        var positive: Int
-        var hospitalize: Int
-        var severe: Int
-        var death: Int
-        var discharge: Int
-    }
+    var pcr: Int //PCR検査数
+    var positive: Int //感染者数
+    var hospitalize: Int //入院患者数
+    var severe: Int //重症者数
+    var death: Int //死者数
+    var discharge: Int //退院者数
 }

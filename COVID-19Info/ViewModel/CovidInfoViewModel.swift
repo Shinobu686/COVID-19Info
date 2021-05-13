@@ -11,7 +11,7 @@ class CovidInfoViewModel: ObservableObject {
     
     @Published var covidData: CovidInfoResponse?
     
-    
+    // リクエストメソッドの呼び出し
     func fetchCovidInfo() {
         CovidInfoService().getCovidInfo { result in
             switch result {

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var screenWidth = UIScreen.main.bounds.width
+    @ObservedObject var covidInfoVM = CovidInfoViewModel()
     
     var body: some View {
         
@@ -26,16 +28,19 @@ struct HomeView: View {
                 
                 HStack(spacing: 10) {
                     VStack(spacing: 40) { // 数値は仮
-                        CovidDataItem(itemName: "PCR検査数", numValue: "54793")
-                        CovidDataItem(itemName: "入院者数", numValue: "63315")
-                        CovidDataItem(itemName: "死者数", numValue: "10846")
+                        CovidDataItem(itemName: "PCR検査数", numValue: "\(covidInfoVM.covidData?.pcr ?? 0)")
+                        
+                        CovidDataItem(itemName: "入院者数", numValue: "\(covidInfoVM.covidData?.hospitalize ?? 0)")
+                        CovidDataItem(itemName: "死者数", numValue: "\(covidInfoVM.covidData?.death ?? 0)")
                     }
                     
                     VStack(spacing: 40) { // 数値は仮
-                        CovidDataItem(itemName: "感染者数", numValue: "635281")
-                        CovidDataItem(itemName: "重症者数", numValue: "1131")
-                        CovidDataItem(itemName: "退院者数", numValue: "551293")
+                        CovidDataItem(itemName: "感染者数", numValue: "\(covidInfoVM.covidData?.positive ?? 0)")
+                        CovidDataItem(itemName: "重症者数", numValue: "\(covidInfoVM.covidData?.severe ?? 0)")
+                        CovidDataItem(itemName: "退院者数", numValue: "\(covidInfoVM.covidData?.discharge ?? 0)")
                     }
+                }.onAppear() {
+                    self.covidInfoVM.fetchCovidInfo()
                 }
             }.padding(.bottom)
             

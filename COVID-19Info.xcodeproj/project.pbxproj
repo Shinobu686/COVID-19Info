@@ -10,7 +10,8 @@
 		D4420C702644357C00613439 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4420C6F2644357C00613439 /* HomeView.swift */; };
 		D4420C752646CD1700613439 /* CovidDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4420C742646CD1700613439 /* CovidDataItem.swift */; };
 		D4B3311326481599003D772E /* CovidInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3311226481599003D772E /* CovidInfoResponse.swift */; };
-		D4B33118264819B0003D772E /* CovidInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B33117264819B0003D772E /* CovidInfoRequest.swift */; };
+		D4B33118264819B0003D772E /* CovidInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B33117264819B0003D772E /* CovidInfoService.swift */; };
+		D4B33131264D2B27003D772E /* CovidInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B33130264D2B27003D772E /* CovidInfoViewModel.swift */; };
 		D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF12640362A00F57DFC /* AppDelegate.swift */; };
 		D4DD0BF42640362A00F57DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */; };
 		D4DD0BF82640362C00F57DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DD0BF72640362C00F57DFC /* Assets.xcassets */; };
@@ -22,7 +23,8 @@
 		D4420C6F2644357C00613439 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D4420C742646CD1700613439 /* CovidDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDataItem.swift; sourceTree = "<group>"; };
 		D4B3311226481599003D772E /* CovidInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoResponse.swift; sourceTree = "<group>"; };
-		D4B33117264819B0003D772E /* CovidInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoRequest.swift; sourceTree = "<group>"; };
+		D4B33117264819B0003D772E /* CovidInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoService.swift; sourceTree = "<group>"; };
+		D4B33130264D2B27003D772E /* CovidInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoViewModel.swift; sourceTree = "<group>"; };
 		D4DD0BEE2640362A00F57DFC /* COVID-19Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DD0BF12640362A00F57DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +73,17 @@
 		D4B3311626481992003D772E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D4B33117264819B0003D772E /* CovidInfoRequest.swift */,
+				D4B33130264D2B27003D772E /* CovidInfoViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4B33133264D2B30003D772E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D4B33117264819B0003D772E /* CovidInfoService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D4DD0BE52640362A00F57DFC = {
@@ -97,6 +107,7 @@
 			children = (
 				D4DD0BF12640362A00F57DFC /* AppDelegate.swift */,
 				D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */,
+				D4B33133264D2B30003D772E /* Service */,
 				D4B3311626481992003D772E /* ViewModel */,
 				D4B33111264814CA003D772E /* Model */,
 				D4420C782646CD2B00613439 /* View */,
@@ -186,8 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B33118264819B0003D772E /* CovidInfoRequest.swift in Sources */,
+				D4B33118264819B0003D772E /* CovidInfoService.swift in Sources */,
 				D4420C752646CD1700613439 /* CovidDataItem.swift in Sources */,
+				D4B33131264D2B27003D772E /* CovidInfoViewModel.swift in Sources */,
 				D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */,
 				D4420C702644357C00613439 /* HomeView.swift in Sources */,
 				D4DD0BF42640362A00F57DFC /* SceneDelegate.swift in Sources */,

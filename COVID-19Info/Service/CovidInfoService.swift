@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class CovidInfoRequest {
+class CovidInfoService {
     
     // カスタムエラーの定義
     enum NetWorkError: Error {
@@ -18,7 +18,7 @@ class CovidInfoRequest {
     }
     
     // APIリクエストに関する処理
-    static func getCovidInfo(completion: @escaping (Result<CovidInfoResponse?, NetWorkError>) -> Void) {
+    func getCovidInfo(completion: @escaping (Result<CovidInfoResponse?, NetWorkError>) -> Void) {
         guard let url = URL(string: "https://covid19-japan-web-api.vercel.app/api/v1/total") else {
             return completion(.failure(.badUrl))
         }

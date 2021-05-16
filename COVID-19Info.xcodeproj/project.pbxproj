@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		D4B3311326481599003D772E /* CovidInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3311226481599003D772E /* CovidInfoResponse.swift */; };
 		D4B33118264819B0003D772E /* CovidInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B33117264819B0003D772E /* CovidInfoService.swift */; };
 		D4B33131264D2B27003D772E /* CovidInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B33130264D2B27003D772E /* CovidInfoViewModel.swift */; };
+		D4B3313B26513B2A003D772E /* WKView in Frameworks */ = {isa = PBXBuildFile; productRef = D4B3313A26513B2A003D772E /* WKView */; };
 		D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF12640362A00F57DFC /* AppDelegate.swift */; };
 		D4DD0BF42640362A00F57DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */; };
 		D4DD0BF82640362C00F57DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DD0BF72640362C00F57DFC /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B3313B26513B2A003D772E /* WKView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = "COVID-19Info";
+			packageProductDependencies = (
+				D4B3313A26513B2A003D772E /* WKView */,
+			);
 			productName = "COVID-19Info";
 			productReference = D4DD0BEE2640362A00F57DFC /* COVID-19Info.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +175,9 @@
 				Base,
 			);
 			mainGroup = D4DD0BE52640362A00F57DFC;
+			packageReferences = (
+				D4B3313926513B29003D772E /* XCRemoteSwiftPackageReference "WKView" */,
+			);
 			productRefGroup = D4DD0BEF2640362A00F57DFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -401,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4B3313926513B29003D772E /* XCRemoteSwiftPackageReference "WKView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rebeloper/WKView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4B3313A26513B2A003D772E /* WKView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4B3313926513B29003D772E /* XCRemoteSwiftPackageReference "WKView" */;
+			productName = WKView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4DD0BE62640362A00F57DFC /* Project object */;
 }

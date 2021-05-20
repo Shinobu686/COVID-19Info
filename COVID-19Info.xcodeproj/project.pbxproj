@@ -15,6 +15,7 @@
 		D4B3313B26513B2A003D772E /* WKView in Frameworks */ = {isa = PBXBuildFile; productRef = D4B3313A26513B2A003D772E /* WKView */; };
 		D4B331C62656ADD6003D772E /* moveToWebButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B331C52656ADD6003D772E /* moveToWebButton.swift */; };
 		D4B331CF2656AEE9003D772E /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B331CE2656AEE9003D772E /* UIComponents.swift */; };
+		D4B331DD2656B451003D772E /* CovidInfoBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B331DC2656B451003D772E /* CovidInfoBoard.swift */; };
 		D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF12640362A00F57DFC /* AppDelegate.swift */; };
 		D4DD0BF42640362A00F57DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */; };
 		D4DD0BF82640362C00F57DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DD0BF72640362C00F57DFC /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		D4B33130264D2B27003D772E /* CovidInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoViewModel.swift; sourceTree = "<group>"; };
 		D4B331C52656ADD6003D772E /* moveToWebButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveToWebButton.swift; sourceTree = "<group>"; };
 		D4B331CE2656AEE9003D772E /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		D4B331DC2656B451003D772E /* CovidInfoBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoBoard.swift; sourceTree = "<group>"; };
 		D4DD0BEE2640362A00F57DFC /* COVID-19Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DD0BF12640362A00F57DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4DD0BF32640362A00F57DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				D4420C742646CD1700613439 /* CovidDataItem.swift */,
 				D4B331C52656ADD6003D772E /* moveToWebButton.swift */,
+				D4B331DC2656B451003D772E /* CovidInfoBoard.swift */,
 			);
 			path = UIParts;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				D4B331CF2656AEE9003D772E /* UIComponents.swift in Sources */,
 				D4420C752646CD1700613439 /* CovidDataItem.swift in Sources */,
 				D4B33131264D2B27003D772E /* CovidInfoViewModel.swift in Sources */,
+				D4B331DD2656B451003D772E /* CovidInfoBoard.swift in Sources */,
 				D4DD0BF22640362A00F57DFC /* AppDelegate.swift in Sources */,
 				D4B331C62656ADD6003D772E /* moveToWebButton.swift in Sources */,
 				D4420C702644357C00613439 /* HomeView.swift in Sources */,

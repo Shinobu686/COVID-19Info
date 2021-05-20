@@ -23,10 +23,7 @@ struct HomeView: View {
                     .foregroundColor(.white)
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(Color.white)
-                        .frame(width: UIComponents.screenWidth, height: UIComponents.screenWidth + 100)
-                        .shadow(color: .gray, radius: 3, x: 10, y: 7)
+                    CovidInfoBoard()
                     
                     HStack(spacing: 10) {
                         VStack(spacing: 40) {

@@ -21,7 +21,11 @@ struct moveToWebButton: View {
                 .foregroundColor(Color.white)
                 .font(.title2)
                 .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
+                .cornerRadius(30)
+
+                .shadow(color: Color.gray.opacity(0.5), radius: 4, x: 10, y: 10)
                 .padding()
+            
         }
     }
 }

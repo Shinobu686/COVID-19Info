@@ -10,8 +10,6 @@ import WKView
 
 struct HomeView: View {
     
-    var screenWidth = UIScreen.main.bounds.width
-    
     @ObservedObject var covidInfoVM = CovidInfoViewModel()
     @State var flag: Bool = false
     
@@ -27,7 +25,7 @@ struct HomeView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 30)
                         .fill(Color.white)
-                        .frame(width: screenWidth, height: screenWidth + 100)
+                        .frame(width: UIComponents.screenWidth, height: UIComponents.screenWidth + 100)
                         .shadow(color: .gray, radius: 3, x: 10, y: 7)
                     
                     HStack(spacing: 10) {
@@ -52,17 +50,9 @@ struct HomeView: View {
                     EmptyView()
                 }
                 
-                Button(action: {
-                    self.flag.toggle()
-                }) {
-                    Text("厚労省ホームページ")
-                        .fontWeight(.bold)
-                        .frame(width: screenWidth / 1.2, height: screenWidth / 9)
-                        .foregroundColor(Color.white)
-                        .font(.title2)
-                        .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-                        .padding()
-                }
+                moveToWebButton(action: {
+                    self.flag = true
+                })
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
